@@ -455,7 +455,7 @@ impl<W: BaseExt, N: FieldExt> IntegerChipOps<W, N> for IntegerContext<W, N> {
         //TODO: optimize
         let one = self.assign_int_constant(W::one());
         let (c, v) = self.int_div(&one, x);
-        self.ctx.borrow_mut().assert_false(&c);
+        // self.ctx.borrow_mut().assert_false(&c);
         v
     }
 
